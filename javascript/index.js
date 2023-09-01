@@ -37,11 +37,11 @@ const allLoadVideos = async (categoryId) => {
                         <img src=${video.authors[0].profile_picture} alt="Profile Picture" class="h-full w-full object-cover">
                     </div>
                     <h2 class="text-xl font-semibold">${video.title}</h2>
-                    ${video.authors[0].verified ? '<i class="fas fa-check-circle text-blue-500"></i>' : ''}
+                    ${video.authors[0].verified}
                 </div>
                 <p class="text-gray-700">
                     ${video.authors[0].profile_name}
-                    ${video.authors[0].verified ? '<span class="text-blue-500 ml-1">Verified</span>' : ''}
+                    ${video.authors[0].verified ? '<span class="text-blue-500 ml-1"><i class="fas fa-check-circle text-blue-500"></i></span>' : ''}
                 </p>
                 <p class="text-gray-700">${video.others.views}</p>
                 <div class="card-actions justify-end">
