@@ -8,24 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="card h-[350px] bg-base-100 shadow-xl">
-        <figure><img src=${video.thumbnail} /></figure>
-        <div class="card-body">
-            <div class="flex items-center space-x-2">
-                <div class="rounded-full overflow-hidden h-12 w-12">
-                    <img src=${video.authors[0].profile_picture} alt="Profile Picture" class="h-full w-full object-cover">
-                </div>
-                <h2 class="text-xl font-semibold">${video.title}</h2>
-                ${video.authors[0].verified ? '<i class="fas fa-check-circle text-blue-500"></i>' : ''}
-            </div>
-            <p class="text-gray-700">
-                ${video.authors[0].profile_name}
-                ${video.authors[0].verified ? '<span class="text-blue-500 ml-1">Verified</span>' : ''}
-            </p>
-            <p class="text-gray-700">${video.others.views}</p>
-            <div class="card-actions justify-end">
-            </div>
+    <div class="hero min-h-screen">
+        <div class="hero-content flex-col ">
+          <img src="./img/Icon.png" class="max-w-sm rounded-lg shadow-2xl" />
+          <div>
+            <h1 class="text-5xl font-bold text-center py-8">Oops!! Sorry, <br><br> There is no content here</h1>
+            
+            
+          </div>
         </div>
-    </div>
+      </div>
 </body>
 </html>

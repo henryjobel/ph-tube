@@ -26,8 +26,8 @@
     <main>
         <!-- tab section  -->
        <section>
-        <div  class="tab-container">
-        <div id="tab-container"class="tabs tabs-boxed justify-center py-8">
+        <div  class="tab-container bg-white">
+        <div id="tab-container"class=" tabs tabs-boxed justify-center py-8 bg-white">
             <!-- <a class="tab">Tab 1</a> 
             <a class="tab">Tab 2</a> 
             <a class="tab">Tab 3</a> -->
@@ -38,7 +38,7 @@
     </section>
     <!-- card section -->
     <section>
-       <div id="card-container" class="grid grid-cols-4 gap-7">
+       <div id="card-container" class="grid lg:grid-cols-4 gap-7 py-5">
         <!-- <div class="card  bg-base-100 shadow-xl">
             <figure><img src=${video.thumbnail} /></figure>
             <div class="card-body">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <p class="text-gray-700">${video.authors[0].profile_name}</p>
-                <p class="text-gray-700">${video.others.views}</p>
+                <p class="text-gray-700">Views=${video.others.views}</p>
                 <div class="card-actions justify-end">
                 </div>
             </div>

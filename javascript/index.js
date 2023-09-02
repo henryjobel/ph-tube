@@ -32,7 +32,7 @@ const allLoadVideos = async (categoryId) => {
     console.log(video);
     const div = document.createElement('div');
     div.innerHTML = `
-            <div class="card h-[350px] bg-base-100 shadow-xl">
+            <div class="card lg:h-[350px] bg-base-100 shadow-xl">
             <figure><img src=${video.thumbnail} /></figure>
             <div class="card-body">
                 <div class="flex items-center space-x-2">
@@ -46,13 +46,16 @@ const allLoadVideos = async (categoryId) => {
                     ${video.authors[0].profile_name}
                     ${video.authors[0].verified ? '<span class="text-blue-500 ml-1"><i class="fas fa-check-circle text-blue-500"></i></span>' : ''}
                 </p>
-                <p class="text-gray-700">${video.others.views}</p>
+                <p class="text-gray-700">Views:${video.others.views}</p>
                 <div class="card-actions justify-end">
                 </div>
             </div>
         </div>
     `;
         cardContainer.appendChild(div)
+        
+
+        
 
     });
     
@@ -69,24 +72,23 @@ const noVideoshow = async (categoryId) => {
         
         const div = document.createElement('div');
         div.innerHTML = `
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content text-center">
-                    <div class="max-w-md">
-                        <h1 class="text-5xl font-bold">No Videos Found</h1>
-                        <p class="py-6">Sorry, there are no videos available in this category.</p>
-                        <button class="btn btn-primary">Return to Categories</button>
-                    </div>
-                </div>
-            </div>
+        <div class="hero min-h-screen">
+        <div class="hero-content flex-col ">
+          <img src="./img/Icon.png" class="max-w-sm rounded-lg shadow-2xl" />
+          <div>
+            <h1 class="text-5xl font-bold text-center py-8">Oops!! Sorry, <br><br> There is no content here</h1>
         `;
         heroContainer.appendChild(div);
+        
     } else {
         
         data.data.forEach(video => {
             console.log(video);
+           
             
         });
     }
+   
 }
 
 noVideoshow("1005");
