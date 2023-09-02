@@ -40,7 +40,7 @@ const allLoadVideos = async (categoryId) => {
                         <img src=${video.authors[0].profile_picture} alt="Profile Picture" class="h-full w-full object-cover">
                     </div>
                     <h2 class="text-xl font-semibold">${video.title}</h2>
-                    ${video.authors[0].verified}
+                    
                 </div>
                 <p class="text-gray-700">
                     ${video.authors[0].profile_name}
@@ -88,7 +88,6 @@ const noVideoshow = async (categoryId) => {
         });
     }
 }
-
 
 noVideoshow("1005");
 allCategory();
